@@ -2,7 +2,7 @@ import numpy as np
 from utils.mc_b_est import round_half_up, estimate_mc
 
 if __name__ == '__main__':
-	magnitude_sample = np.load("../input_data/magnitudes.npy")
+	magnitude_sample = np.load("../seismic-bumps.csv")
 
 	mcs = round_half_up(np.arange(2.0, 5.5, 0.1), 1)
 	mcs_tested, ks_distances, p_values, mc_winner, beta_winner = estimate_mc(
